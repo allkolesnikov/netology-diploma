@@ -464,3 +464,45 @@ curl ifconfig.me
 - настройка групп безопасности.
 
 В результате обеспечена безопасная сетевая архитектура, соответствующая требованиям дипломного проекта и исключающая прямой доступ к внутренним серверам из сети Интернет.
+
+# 6. Конфигурационные файлы проекта
+
+Для воспроизводимости настройки основные конфигурационные файлы вынесены в каталог `deploy/`.
+
+## Elasticsearch
+
+Файл конфигурации Docker Compose для Elasticsearch:
+
+[deploy/elastic/docker-compose.yml](../deploy/elastic/docker-compose.yml)
+
+Используется для запуска Elasticsearch в Docker-контейнере. Сервис принимает данные от Filebeat на порту `9200`.
+
+---
+
+## Kibana
+
+Файл конфигурации Docker Compose для Kibana:
+
+[deploy/kibana/docker-compose.yml](../deploy/kibana/docker-compose.yml)
+
+Используется для запуска Kibana и подключения к Elasticsearch.
+
+---
+
+## Zabbix
+
+Файл конфигурации Docker Compose для Zabbix:
+
+[deploy/zabbix/docker-compose.yml](../deploy/zabbix/docker-compose.yml)
+
+Используется для запуска сервера мониторинга Zabbix.
+
+---
+
+## Filebeat
+
+Файл конфигурации Filebeat:
+
+[deploy/filebeat/filebeat.yml](../deploy/filebeat/filebeat.yml)
+
+Filebeat установлен на серверах `web-1` и `web-2` и используется для сбора логов Nginx с последующей отправкой в Elasticsearch.
