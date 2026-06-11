@@ -7,7 +7,6 @@
 ## Используемые технологии
 
 - Yandex Cloud
-- Terraform
 - Ansible
 - Nginx
 - Application Load Balancer
