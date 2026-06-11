@@ -183,6 +183,10 @@ curl localhost:9200
 
 *Скриншот 1. Проверка работоспособности Elasticsearch.*
 
+Конфигурация Elasticsearch:
+
+- [docker-compose.yml](../deploy/elastic/docker-compose.yml)
+
 ---
 
 ## Настройка Filebeat на сервере web-1
@@ -234,10 +238,6 @@ systemctl status filebeat
 ```bash
 curl localhost:9200/_cat/indices?v
 ```
-
-Конфигурация Elasticsearch:
-
-- [docker-compose.yml](../deploy/elastic/docker-compose.yml)
 
 В результате обнаружен индекс `.ds-filebeat-*`, автоматически созданный Filebeat. Наличие документов в индексе подтверждает успешную передачу журналов от веб-серверов.
 
