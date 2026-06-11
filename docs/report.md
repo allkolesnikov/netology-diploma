@@ -151,6 +151,10 @@
 
 *Скриншот 4. Настройка триггеров контроля состояния серверов.*
 
+Конфигурация сервиса:
+
+- [Zabbix Docker Compose](../deploy/zabbix/docker-compose.yml)
+
 # 3. Централизованный сбор и анализ логов
 
 Для централизованного хранения и анализа журналов работы веб-приложения развернут стек Elastic Stack, включающий следующие компоненты:
@@ -208,6 +212,9 @@ systemctl status filebeat
 ```bash
 systemctl status filebeat
 ```
+Конфигурация Filebeat:
+
+- [filebeat.yml](../deploy/filebeat/filebeat.yml)
 
 Служба успешно запущена и работает в штатном режиме.
 
@@ -226,6 +233,10 @@ systemctl status filebeat
 ```bash
 curl localhost:9200/_cat/indices?v
 ```
+
+Конфигурация Elasticsearch:
+
+- [docker-compose.yml](../deploy/elastic/docker-compose.yml)
 
 В результате обнаружен индекс `.ds-filebeat-*`, автоматически созданный Filebeat. Наличие документов в индексе подтверждает успешную передачу журналов от веб-серверов.
 
@@ -247,6 +258,9 @@ curl localhost:9200/_cat/indices?v
 
 *Скриншот 5. Просмотр журналов в интерфейсе Kibana.*
 
+Конфигурация Kibana:
+
+- [docker-compose.yml](../deploy/kibana/docker-compose.yml)
 ---
 
 ## Результаты реализации подсистемы логирования
