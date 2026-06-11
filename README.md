@@ -65,4 +65,4 @@ Bastion
 
 Подробный отчет расположен в:
 
-docs/report.md
+[docs/report.md](docs/report.md)
