@@ -1,10 +1,12 @@
+# Sensitive values have been removed from the public repository.
+
 services:
 
   postgres:
     image: postgres:16
     environment:
       POSTGRES_USER: zabbix
-      POSTGRES_PASSWORD: zabbixpass
+      POSTGRES_PASSWORD: ****
       POSTGRES_DB: zabbix
     restart: unless-stopped
 
@@ -13,7 +15,7 @@ services:
     environment:
       DB_SERVER_HOST: postgres
       POSTGRES_USER: zabbix
-      POSTGRES_PASSWORD: zabbixpass
+      POSTGRES_PASSWORD: ****
       POSTGRES_DB: zabbix
     depends_on:
       - postgres
@@ -26,7 +28,7 @@ services:
     environment:
       DB_SERVER_HOST: postgres
       POSTGRES_USER: zabbix
-      POSTGRES_PASSWORD: zabbixpass
+      POSTGRES_PASSWORD: ****
       POSTGRES_DB: zabbix
       ZBX_SERVER_HOST: zabbix-server
       PHP_TZ: Europe/Moscow
