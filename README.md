@@ -60,6 +60,15 @@ Bastion
 
 Доступ в интернет из приватного сегмента осуществляется через NAT Gateway.
 
+## Конфигурационные файлы
+
+Основные конфигурации сервисов находятся в каталоге `deploy/`:
+
+- [Elasticsearch](deploy/elastic/docker-compose.yml)
+- [Kibana](deploy/kibana/docker-compose.yml)
+- [Zabbix](deploy/zabbix/docker-compose.yml)
+- [Filebeat](deploy/filebeat/filebeat.yml)
+
 ## Отчет
 
 Подробный отчет расположен в:
