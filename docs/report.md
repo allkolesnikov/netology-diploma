@@ -212,15 +212,16 @@ systemctl status filebeat
 ```bash
 systemctl status filebeat
 ```
-Конфигурация Filebeat:
-
-- [filebeat.yml](../deploy/filebeat/filebeat.yml)
 
 Служба успешно запущена и работает в штатном режиме.
 
 ![Filebeat web-2](screenshots/filebeat-web2.png)
 
 *Скриншот 3. Состояние службы Filebeat на сервере web-2.*
+
+Конфигурация Filebeat:
+
+- [filebeat.yml](../deploy/filebeat/filebeat.yml)
 
 ---
 
